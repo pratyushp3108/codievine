@@ -905,3 +905,4 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql\\src\\Driver\\Database\\mysql\\',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_Qt1SJFPG6x_N9GNfDAlfMRjKNZcb9LzYAt9zNbYvyaDojn1dpZWQpjNqK5rWlTItn3ugdsv7Cg/sync';
+$config['system.logging']['error_level'] = 'verbose';
