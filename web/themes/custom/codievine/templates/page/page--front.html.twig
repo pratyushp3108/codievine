@@ -1,0 +1,60 @@
+{% include '@codievine/includes/header.html.twig' %}
+
+<main id="main-content" class="home-page container py-5">
+
+  {% if node.body.value %}
+    <section class="section-body mb-5">
+      <div class="content-body">
+        {{ node.body.value|raw }}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if node.field_insite.0.value %}
+    <section class="section-insite mb-5 bg-light p-4 rounded">
+      {# <h2 class="section-title">Inside</h2> #}
+      <div class="content-insite">
+        {{ node.field_insite.0.value|raw }}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if node.field_our_clients.0.value %}
+    <section class="section-our-clients mb-5">
+      {# <h2 class="section-title">Our Clients</h2> #}
+      <div class="content-our-clients">
+        {{ node.field_our_clients.0.value|raw }}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if node.field_our_services.0.value %}
+    <section class="section-our-services mb-5 bg-light p-4 rounded">
+      {# <h2 class="section-title">Our Services</h2> #}
+      <div class="content-our-services">
+        {{ node.field_our_services.0.value|raw }}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if node.field_our_team.0.value %}
+    <section class="section-our-team mb-5">
+      {# <h2 class="section-title">Our Team</h2> #}
+      <div class="content-our-team">
+        {{ node.field_our_team.0.value|raw }}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if node.field_technology_we_use.0.value %}
+    <section class="section-technology-we-use mb-5 bg-light p-4 rounded">
+      {# <h2 class="section-title">Technology We Use</h2> #}
+      <div class="content-technology-we-use">
+        {{ node.field_technology_we_use.0.value|raw }}
+      </div>
+    </section>
+  {% endif %}
+
+</main>
+
+{% include '@codievine/includes/footer.html.twig' %}
