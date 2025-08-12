@@ -1,0 +1,16 @@
+{# templates/page/page.html.twig #}
+{% include '@codievine/includes/header.html.twig' %}
+
+<div class="slider container">
+  {{ page.slider }}
+</div>
+
+<div class="breadcrumb container">
+  {{ page.breadcrumb }}
+</div>
+
+<main role="main" class="container">
+  {{ page.content }}
+</main>
+
+{% include '@codievine/includes/footer.html.twig' %}
