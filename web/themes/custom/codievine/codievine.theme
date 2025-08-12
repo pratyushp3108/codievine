@@ -1,19 +1,20 @@
 <?php
 
+use Drupal\node\Entity\Node;
+
 /**
- * Implements hook_theme().
+ * Implements hook_preprocess_page().
  */
-function codievine_theme($existing, $type, $theme, $path) {
-  return [
-    'page' => [
-      'render element' => 'page',
-      'path' => $path . '/templates/page',
-      'template' => 'page',
-    ],
-    'node' => [
-      'render element' => 'elements',
-      'path' => $path . '/templates/node',
-      'template' => 'node',
-    ],
-  ];
+function YOUR_THEME_preprocess_page(&$variables) {
+  if (!empty($variables['node']) && $variables['node'] instanceof Node) {
+    $node = $variables['node'];
+
+    if ($node->bundle() == 'home_page') {
+      $variables['field_insite'] = $node->get('field_insite')->view();
+      $variables['field_our_clients'] = $node->get('field_our_clients')->view();
+      $variables['field_our_services'] = $node->get('field_our_services')->view();
+      $variables['field_our_team'] = $node->get('field_our_team')->view();
+      $variables['field_technology_we_use'] = $node->get('field_technology_we_use')->view();
+    }
+  }
 }
