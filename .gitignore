@@ -1,0 +1,59 @@
+# Ignore the Composer vendor directory
+/vendor/
+
+# Ignore Drupal core files and packages (installed via Composer)
+web/core/
+web/modules/contrib/
+web/themes/contrib/
+web/profiles/contrib/
+web/libraries/
+
+# Ignore config files and settings that are environment-specific
+web/sites/*/settings.local.php
+web/sites/*/services.local.yml
+web/sites/*/development.services.yml
+web/sites/*/files/
+web/sites/*/private/
+
+# Ignore .env and related environment files
+.env
+.env.local
+.env.*
+
+# Ignore backup and temporary files
+*.bak
+*.swp
+*.tmp
+*.orig
+*~
+
+# Ignore IDE/editor config files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore PHPUnit test output
+phpunit.xml
+phpunit.result.cache
+test-results/
+
+# Ignore node-related files if using frontend tooling
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore Drupal file and image uploads
+web/sites/default/files/
+
+# Ignore Drush generated files
+drush/backups/
+drush/sites/self.site.yml
+
+# Ignore composer lock if desired (optional, not recommended for production)
+# composer.lock
+
+# Ignore misc
+.DS_Store
+Thumbs.db
