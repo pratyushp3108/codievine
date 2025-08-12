@@ -1,0 +1,13 @@
+<header class="header container">
+  <div class="branding d-flex align-items-center justify-content-between py-3">
+    {% if logo %}
+      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
+        <img src="{{ logo }}" alt="{{ 'Home'|t }}" />
+      </a>
+    {% endif %}
+    {{ page.header_branding }}
+  </div>
+  <nav class="header-menu navbar navbar-expand-lg navbar-light bg-light">
+    {{ page.header_menu }}
+  </nav>
+</header>

@@ -1,0 +1,8 @@
+/* Basic styles for Codievine theme */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.site-logo img {
+  max-height: 60px;
+}

@@ -1,0 +1,27 @@
+name: Codievine
+type: theme
+description: 'A custom Drupal 10 theme using Bootstrap as base theme.'
+core_version_requirement: ^10
+base theme: bootstrap
+package: Custom
+
+libraries:
+  - codievine/global-styling
+
+logo:
+  path: logo
+  uri: logo.png
+
+favicon:
+  path: logo
+  uri: favicon.ico
+
+regions:
+  header_branding: 'Header Branding'
+  header_menu: 'Header Menu'
+  slider: 'Slider'
+  breadcrumb: 'Breadcrumb / Page Title'
+  content: 'Content'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_copyright: 'Footer Copyright'
