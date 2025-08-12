@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function codievine_theme($existing, $type, $theme, $path) {
+  return [
+    'page' => [
+      'render element' => 'page',
+      'path' => $path . '/templates/page',
+      'template' => 'page',
+    ],
+    'node' => [
+      'render element' => 'elements',
+      'path' => $path . '/templates/node',
+      'template' => 'node',
+    ],
+  ];
+}
